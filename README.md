@@ -1,6 +1,6 @@
 # go-qrcode #
 
-<img src='https://skip.org/img/nyancat-youtube-qr.png' align='right'>
+
 
 Package qrcode implements a QR Code encoder. [![Build Status](https://travis-ci.org/skip2/go-qrcode.svg?branch=master)](https://travis-ci.org/skip2/go-qrcode)
 
@@ -10,13 +10,13 @@ Each QR Code contains error recovery information to aid reading damaged or obscu
 
 ## Install
 
-    go get -u github.com/skip2/go-qrcode/...
+    go get -u github.com/rjrishabhjain09/qrcode...
 
 A command-line tool `qrcode` will be built into `$GOPATH/bin/`.
 
 ## Usage
 
-    import qrcode "github.com/skip2/go-qrcode"
+    import qrcode "github.com/rjrishabhjain09/qrcode"
 
 - **Create a 256x256 PNG image:**
 
@@ -37,9 +37,7 @@ All examples use the qrcode.Medium error Recovery Level and create a fixed 256x2
 
 [![godoc](https://godoc.org/github.com/skip2/go-qrcode?status.png)](https://godoc.org/github.com/skip2/go-qrcode)
 
-## Demoapp
 
-[http://go-qrcode.appspot.com](http://go-qrcode.appspot.com)
 
 ## CLI
 
@@ -67,20 +65,12 @@ Usage:
 
   2. Save to file if "display" not available:
 
-       qrcode "homepage: https://github.com/skip2/go-qrcode" > out.png
+       qrcode "homepage: https://github.com/rjrishabhjain09/qrcode" > out.png
 
 ```
 ## Maximum capacity
 The maximum capacity of a QR Code varies according to the content encoded and the error recovery level. The maximum capacity is 2,953 bytes, 4,296 alphanumeric characters, 7,089 numeric digits, or a combination of these.
 
-## Borderless QR Codes
 
-To aid QR Code reading software, QR codes have a built in whitespace border.
 
-If you know what you're doing, and don't want a border, see https://gist.github.com/skip2/7e3d8a82f5317df9be437f8ec8ec0b7d for how to do it. It's still recommended you include a border manually.
 
-## Links
-
-- [http://en.wikipedia.org/wiki/QR_code](http://en.wikipedia.org/wiki/QR_code)
-- [ISO/IEC 18004:2006](http://www.iso.org/iso/catalogue_detail.htm?csnumber=43655) - Main QR Code specification (approx CHF 198,00)<br>
-- [https://github.com/qpliu/qrencode-go/](https://github.com/qpliu/qrencode-go/) - alternative Go QR encoding library based on [ZXing](https://github.com/zxing/zxing)
